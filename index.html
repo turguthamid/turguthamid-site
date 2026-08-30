@@ -253,7 +253,7 @@
 
   // Dil değiştir
   function switchLang(lang) {
-    const base = window.location.pathname.split('/').slice(0, -1).join('/');
+    localStorage.setItem('selectedLanguage', lang);
     if (lang === 'en') {
       window.location.href = '/';
     } else {
