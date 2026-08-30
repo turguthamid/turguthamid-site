@@ -204,28 +204,55 @@
 <header>
   <img src="logo.png" alt="Turgut Hamid" class="logo">
   <nav>
-    <a href="about.html">About</a>
+    <a href="index.html">About</a>
     <a href="#expertise">Expertise</a>
     <a href="programmes.html">Training</a>
     <div class="lang-dropdown">
-      <button class="lang-toggle">🌐 Language</button>
+      <button class="lang-toggle" id="langBtn">EN</button>
       <div class="lang-menu">
-        <button onclick="setLanguage('en')">English</button>
-        <button onclick="setLanguage('az')">Azərbaycanca</button>
-        <button onclick="setLanguage('ru')">Русский</button>
+        <button onclick="switchLang('en')">EN</button>
+        <button onclick="switchLang('az')">AZ</button>
+        <button onclick="switchLang('ru')">RU</button>
       </div>
     </div>
     <a href="#contact" class="btn-contact">Contact Me</a>
   </nav>
 </header>
-<script src="lang/translations.js"></script>
+<script>
+  // URL-deki dili detect et
+  function getCurrentLang() {
+    const path = window.location.pathname;
+    if (path.includes('/az')) return 'az';
+    if (path.includes('/ru')) return 'ru';
+    return 'en';
+  }
+
+  // Button-u update et
+  function updateLangButton() {
+    const currentLang = getCurrentLang();
+    document.getElementById('langBtn').textContent = currentLang.toUpperCase();
+  }
+
+  // Dil değiştir
+  function switchLang(lang) {
+    const base = window.location.pathname.split('/').slice(0, -1).join('/');
+    if (lang === 'en') {
+      window.location.href = '/';
+    } else {
+      window.location.href = '/' + lang + '/';
+    }
+  }
+
+  // Sayfa yüklenince button-u ayarla
+  updateLangButton();
+</script>
 <style>
   .lang-dropdown { position: relative; }
-  .lang-toggle { background: none; border: none; color: #8FA69A; font-size: 14px; cursor: pointer; padding: 8px 12px; transition: opacity 0.2s; white-space: nowrap; }
-  .lang-toggle:hover { opacity: 1; }
-  .lang-menu { display: none; position: absolute; top: 100%; right: 0; background: #1a1f1e; border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 8px; min-width: 140px; z-index: 1000; }
+  .lang-toggle { background: none; border: none; color: #8FA69A; font-size: 14px; font-weight: 600; cursor: pointer; padding: 8px 12px; transition: opacity 0.2s; white-space: nowrap; }
+  .lang-toggle:hover { opacity: 1; color: #31C878; }
+  .lang-menu { display: none; position: absolute; top: 100%; right: 0; background: #1a1f1e; border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 8px; min-width: 100px; z-index: 1000; }
   .lang-dropdown:hover .lang-menu { display: flex; flex-direction: column; }
-  .lang-menu button { background: none; border: none; color: #B8C6BF; text-align: left; padding: 10px 16px; cursor: pointer; font-size: 13px; width: 100%; transition: all 0.2s; }
+  .lang-menu button { background: none; border: none; color: #B8C6BF; text-align: center; padding: 10px 16px; cursor: pointer; font-size: 13px; font-weight: 600; width: 100%; transition: all 0.2s; }
   .lang-menu button:hover { background: rgba(49, 200, 120, 0.1); color: #31C878; }
   .lang-menu button:first-child { border-radius: 7px 7px 0 0; }
   .lang-menu button:last-child { border-radius: 0 0 7px 7px; }

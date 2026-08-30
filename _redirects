@@ -1,0 +1,7 @@
+# Language routing
+/az/*    /index.html    200
+/ru/*    /index.html    200
+/en/*    /index.html    200
+
+# Catch-all
+/*    /index.html    200
