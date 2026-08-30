@@ -34,7 +34,7 @@ const translations = {
     exp_1_title: "Marketing Strategy",
     exp_1_desc: "I translate business objectives into clear priorities, actionable plans, budgets, and measurable performance indicators.",
     exp_2_title: "Brand Strategy and Management",
-    exp_2_desc: "I build clear and distinctive brand positions that guide communication, customer experience, and long-term growth.",
+    exp_2_desc: "I define how a brand should be positioned, differentiated, and communicated in the market.",
     exp_3_title: "International Market Entry",
     exp_3_desc: "I adapt global strategies to local audiences, cultural contexts, commercial realities, and consumer behaviours.",
     exp_4_title: "Digital Marketing",
@@ -76,90 +76,90 @@ const translations = {
 
   az: {
     // Navigation
-    nav_about: "Haqqında",
-    nav_expertise: "Mütəxəssislik",
+    nav_about: "Haqqımda",
+    nav_expertise: "Ekspertiza",
     nav_training: "Təlimlər",
-    nav_contact: "Məninlə Əlaqə",
+    nav_contact: "Əlaqə",
 
     // Index - Hero
-    hero_title: "Marketing fikirlərini ölçülü biznes nəticələrinə çeviririm",
-    hero_desc: "Mən Turgut Hamid-əm, 12+ il təcrübəsi olan, brendlərin qurulması, marketing sistemləri və beynəlxalq bazar strategiyaları ilə məşğul olan marketing və kommunikasiya lideri.",
-    btn_contact: "Məninlə Əlaqə",
-    btn_projects: "Layihələrimi Görün →",
+    hero_title: "Marketinq ideyalarını ölçülə bilən biznes nəticələrinə çevirirəm",
+    hero_desc: "Mən Turgut Hamid — brendlərin, marketinq sistemlərinin və beynəlxalq bazar strategiyalarının qurulması üzrə 12 ildən artıq təcrübəyə malik marketinq və kommunikasiyalar rəhbəriyəm.",
+    btn_contact: "Mənimlə əlaqə saxla",
+    btn_projects: "Layihələrimə bax →",
 
     // Index - Stats
-    stats_exp: "İl Təcrübə",
+    stats_exp: "İllik təcrübə",
     stats_brands: "Brend",
     stats_markets: "Bazar",
 
     // Index - Markets
-    markets_title: "9 BAZAR",
-    markets_list: "Azərbaycan · Gürcüstan · Özbəkistan · Rusiya · Türkiyə · İsrail · Birləşmiş Krallıq · Kanada · Amerika Birləşmiş Ştatları",
+    markets_title: "9 bazarda fəaliyyət",
+    markets_list: "Azərbaycan · Gürcüstan · Özbəkistan · Rusiya · Türkiyə · İsrail · Böyük Britaniya · Kanada · ABŞ",
 
     // Index - About
-    about_label: "HAQQINDA",
-    about_title: "Yaradıcı düşünürəm.<br>Sistemli idarə edirəm.<br>Nəticə ilə ölçürəm.",
-    about_text1: "Peşəkar karyerama media və kommunikasiya sahəsində başladım. Televiziya və jurnalistika təcrübəsi məni insanları anlamağa, auditoriya ilə əlaqə kurmağa, aydın mesajlar çatdırmağa və cəlbedici hekayələr yaratmağa öyrətdi.",
-    about_text2: "Indi yaradıcı düşüncəni biznes strategiyası və məlumatlar ilə birləşdirərəm dokuz bazarda brendlərin inkişafına, lokalizasiyaya və marketing kommunikasiyasına dəstək verirəm.",
-    about_link: "Tam Hekayəni Oxu →",
+    about_label: "HAQQIMDA",
+    about_title: "Kreativ düşünürəm.<br>Sistemli idarə edirəm.<br>Nəticələrlə ölçürəm.",
+    about_text1: "Peşəkar fəaliyyətimə media və kommunikasiya sahəsində başlamışam. Televiziya və jurnalistika təcrübəsi mənə insanları anlamağı, auditoriya ilə əlaqə qurmağı, aydın mesajlar yaratmağı və təsirli hekayələr danışmağı öyrədib.",
+    about_text2: "Bu gün kreativ düşüncəni biznes strategiyası və data ilə birləşdirərək doqquz bazarda brendlərin inkişafı, lokallaşdırılması və marketinq kommunikasiyalarına dəstək verirəm.",
+    about_link: "Hekayəmi ətraflı oxu →",
 
     // Index - Expertise
-    expertise_label: "MÜTƏXƏSSİSLİK",
-    expertise_title: "Nə Edirəm",
-    exp_1_title: "Marketing Strategiyası",
-    exp_1_desc: "Biznes məqsədlərini aydın prioritetlərə, fəaliyyət planlarına, büdcələrə və ölçülü performans göstəricilərinə çeviririm.",
-    exp_2_title: "Brend Strategiyası və İdarəçiliyi",
-    exp_2_desc: "Kommunikasiya, müştəri təcrübəsi və uzunmüddətli böyümə istiqamətində sabit brend pozisiyaları yaradıram.",
-    exp_3_title: "Beynəlxalq Bazar Daxil Olması",
-    exp_3_desc: "Qlobal strategiyaları yerli auditoriya, mədəniyyət konteksti, kommersial reallıqlar və istehlakçı davranışına uyğunlaşdırıram.",
-    exp_4_title: "Rəqəmsal Marketing",
-    exp_4_desc: "Məzmun, ödənişli media, sosyal platformalar, CRM və analitikanı vahid rəqəmsal ekosistemində birləşdiririm.",
-    exp_5_title: "Marketing Strukturu İnkişafı",
-    exp_5_desc: "Aydın roller, səmərəli proseslər, məsuliyyət və ölçülü performansa əsaslanan marketing sistemləri qururam.",
-    exp_6_title: "Marketing Kommunikasiyası və PR",
-    exp_6_desc: "Brend mesajlaşdırması, korporativ kommunikasiya, media əlaqələri və auditoriya qavrayışını uyğunlaşdırıram.",
+    expertise_label: "EKSPERTİZA",
+    expertise_title: "Nə edirəm?",
+    exp_1_title: "Marketinq strategiyası",
+    exp_1_desc: "Biznes məqsədlərini aydın prioritetlərə, tətbiq edilə bilən planlara, büdcələrə və ölçülə bilən performans göstəricilərinə çevirirəm.",
+    exp_2_title: "Brend strategiyası və idarəetməsi",
+    exp_2_desc: "Brendin bazarda necə mövqelənəcəyini, fərqlənəcəyini və kommunikasiya quracağını müəyyənləşdirirəm.",
+    exp_3_title: "Beynəlxalq bazarlara giriş",
+    exp_3_desc: "Qlobal strategiyaları yerli auditoriyalara, mədəni kontekstə, kommersiya reallıqlarına və istehlakçı davranışlarına uyğunlaşdırıram.",
+    exp_4_title: "Rəqəmsal marketinq",
+    exp_4_desc: "Kontent, ödənişli media, sosial platformalar, CRM və analitikanı vahid rəqəmsal ekosistemdə birləşdirirəm.",
+    exp_5_title: "Marketinq strukturunun qurulması",
+    exp_5_desc: "Aydın rollar, effektiv proseslər, hesabatlılıq və ölçülə bilən performans əsasında marketinq sistemləri qururam.",
+    exp_6_title: "Marketinq kommunikasiyaları və PR",
+    exp_6_desc: "Brend mesajı, korporativ kommunikasiya, media əlaqələri və auditoriya qavrayışı arasında uyğunluq yaradıram.",
 
     // Index - Approach
     approach_label: "MƏNİM YANAŞMAM",
-    approach_title: "Effektiv marketing diqqət cəlb etməkdən artıqdır",
-    approach_desc: "Düzgün auditoriyaya çatır, rəqabət üstünlüyü yaradır və ölçülü biznes böyümə təmin edir.",
-    flow_1: "Biznes Məqsədi",
-    flow_2: "Bazar və Auditoriya",
+    approach_title: "Effektiv marketinq yalnız diqqət çəkməklə kifayətlənmir",
+    approach_desc: "O, doğru auditoriyaya çatır, rəqabət üstünlüyü yaradır və ölçülə bilən biznes inkişafına töhfə verir.",
+    flow_1: "Biznes məqsədi",
+    flow_2: "Bazar və auditoriya",
     flow_3: "Strategiya",
-    flow_4: "Yerinə Yetirilmə",
-    flow_5: "Ölçülmə",
-    flow_end: "Böyümə",
+    flow_4: "İcra",
+    flow_5: "Ölçmə",
+    flow_end: "İnkişaf",
 
     // Index - Training
-    training_label: "TƏLİMLƏR VƏ KONSULTASIYA",
-    training_title: "Bilik tətbiq ediləndə dəyər yaradır",
-    training_desc: "Həqiqi marketing problemləri, peşəkar hədəfləri və biznes ehtiyacları əsasında qurulmuş praktik inkişaf proqramları.",
-    training_1: "Fərdi Təlimlər və Konsultasiya",
-    training_1_desc: "Marketing bilikləri və qərar qəbulunu güçləndirmək istəyən mütəxəssislər, icraçılar və sahibkarlar üçün fərdiləşdirilmiş seanslar.",
-    training_2: "Korporativ Təlimlər",
-    training_2_desc: "Hər şirkətin sənaye, məqsədləri, komanda strukturu və marketing yetkinlik səviyyəsinə uyğun fərdiləşdirilmiş proqramlar.",
-    training_3: "Seminarlar",
-    training_3_desc: "Marketing, satış, idarəçilik və funksiyalararası komandalar üçün real biznes halları və fəaliyyətli alətlərdən istifadə edən praktik seminarlar.",
+    training_label: "TƏLİM VƏ KONSULTASİYA",
+    training_title: "Bilik tətbiq olunduqda dəyər yaradır",
+    training_desc: "Real marketinq çətinlikləri, peşəkar inkişaf məqsədləri və biznes ehtiyacları əsasında hazırlanmış praktiki inkişaf proqramları.",
+    training_1: "Fərdi təlim və konsultasiya",
+    training_1_desc: "Marketinq biliklərini və qərarvermə bacarıqlarını gücləndirmək istəyən mütəxəssislər, rəhbərlər və sahibkarlar üçün fərdiləşdirilmiş sessiyalar.",
+    training_2: "Korporativ təlimlər",
+    training_2_desc: "Şirkətin fəaliyyət sahəsi, məqsədləri, komanda strukturu və marketinq inkişaf səviyyəsinə uyğun hazırlanmış xüsusi proqramlar.",
+    training_3: "Praktiki workshop-lar",
+    training_3_desc: "Real biznes nümunələri və tətbiq edilə bilən alətlər əsasında marketinq, satış, idarəetmə və funksiyalararası komandalar üçün praktiki workshop-lar.",
 
     // Contact
-    contact_title: "Yeni layihələr və əməkdaşlıq imkanlarını müzakirə etməyə açığam",
-    contact_desc: "Brendinizin bugün harada olduğunu deyil, gələcəkdə nərə gedə biləcəyini müzakirə edək.",
+    contact_title: "Yeni layihələri və əməkdaşlıq imkanlarını müzakirə etməyə açığam",
+    contact_desc: "Gəlin brendinizin yalnız bu gün harada olduğunu deyil, gələcəkdə hara çata biləcəyini də müzakirə edək.",
 
     // Footer
-    footer_copy: "© 2026 Turgut Hamid — Marketing və Kommunikasiya Lideri"
+    footer_copy: "© 2026 Turgut Hamid — Marketinq və kommunikasiyalar üzrə rəhbər"
   },
 
   ru: {
     // Navigation
-    nav_about: "О себе",
+    nav_about: "Обо мне",
     nav_expertise: "Экспертиза",
-    nav_training: "Тренинги",
-    nav_contact: "Связаться",
+    nav_training: "Обучение",
+    nav_contact: "Связаться со мной",
 
     // Index - Hero
     hero_title: "Я превращаю маркетинговые идеи в измеримые бизнес-результаты",
-    hero_desc: "Я Тургут Хамид, маркетолог и лидер в области коммуникаций с более чем 12 лет опыта в построении брендов, создании маркетинговых систем и разработке международных рыночных стратегий.",
-    btn_contact: "Связаться",
+    hero_desc: "Я Тургут Гамид — руководитель в сфере маркетинга и коммуникаций с более чем 12-летним опытом развития брендов, построения маркетинговых систем и разработки стратегий выхода на международные рынки.",
+    btn_contact: "Связаться со мной",
     btn_projects: "Посмотреть мои проекты →",
 
     // Index - Stats
@@ -168,60 +168,60 @@ const translations = {
     stats_markets: "Рынков",
 
     // Index - Markets
-    markets_title: "9 РЫНКОВ",
-    markets_list: "Азербайджан · Грузия · Узбекистан · Россия · Турция · Израиль · Соединённое Королевство · Канада · Соединённые Штаты",
+    markets_title: "Опыт работы на 9 рынках",
+    markets_list: "Азербайджан · Грузия · Узбекистан · Россия · Турция · Израиль · Великобритания · Канада · США",
 
     // Index - About
-    about_label: "О СЕБЕ",
-    about_title: "Я мыслю творчески.<br>Я управляю систематически.<br>Я измеряю результатами.",
-    about_text1: "Я начал свою профессиональную карьеру в СМИ и коммуникациях. Мой опыт работы в телевидении и журналистике научил меня понимать людей, устанавливать контакт с аудиторией, доносить чёткие сообщения и создавать убедительные истории.",
-    about_text2: "Сегодня я объединяю творческое мышление с бизнес-стратегией и данными, чтобы поддерживать бренды в развитии рынков, локализации и маркетинговых коммуникациях на девяти рынках.",
-    about_link: "Прочитать полную историю →",
+    about_label: "ОБО МНЕ",
+    about_title: "Я мыслю креативно.<br>Управляю системно.<br>Оцениваю по результатам.",
+    about_text1: "Я начал свою профессиональную карьеру в сфере медиа и коммуникаций. Опыт работы на телевидении и в журналистике научил меня понимать людей, выстраивать связь с аудиторией, создавать понятные сообщения и рассказывать убедительные истории.",
+    about_text2: "Сегодня я объединяю креативное мышление, бизнес-стратегию и данные, помогая брендам развиваться, адаптироваться и выстраивать маркетинговые коммуникации на девяти рынках.",
+    about_link: "Узнать обо мне больше →",
 
     // Index - Expertise
     expertise_label: "ЭКСПЕРТИЗА",
-    expertise_title: "Что я делаю",
+    expertise_title: "Чем я занимаюсь",
     exp_1_title: "Маркетинговая стратегия",
-    exp_1_desc: "Я превращаю бизнес-цели в чёткие приоритеты, действенные планы, бюджеты и измеримые показатели производительности.",
+    exp_1_desc: "Я превращаю бизнес-цели в понятные приоритеты, практические планы, бюджеты и измеримые показатели эффективности.",
     exp_2_title: "Стратегия и управление брендом",
-    exp_2_desc: "Я создаю чёткие и отличительные позиции брендов, которые направляют коммуникации, опыт клиентов и долгосрочный рост.",
-    exp_3_title: "Выход на международный рынок",
-    exp_3_desc: "Я адаптирую глобальные стратегии к местной аудитории, культурному контексту, коммерческим реалиям и поведению потребителей.",
+    exp_2_desc: "Я определяю позиционирование бренда, его отличия от конкурентов и подход к коммуникации на рынке.",
+    exp_3_title: "Выход на международные рынки",
+    exp_3_desc: "Я адаптирую глобальные стратегии к локальной аудитории, культурному контексту, коммерческим реалиям и потребительскому поведению.",
     exp_4_title: "Цифровой маркетинг",
-    exp_4_desc: "Я интегрирую контент, платные медиа, социальные платформы, CRM и аналитику в единую цифровую экосистему.",
-    exp_5_title: "Развитие маркетинговой структуры",
-    exp_5_desc: "Я создаю маркетинговые системы на основе чётких ролей, эффективных процессов, ответственности и измеримой производительности.",
+    exp_4_desc: "Я объединяю контент, платные медиа, социальные платформы, CRM и аналитику в единую цифровую экосистему.",
+    exp_5_title: "Построение маркетинговой структуры",
+    exp_5_desc: "Я создаю маркетинговые системы на основе чётких ролей, эффективных процессов, ответственности и измеримых результатов.",
     exp_6_title: "Маркетинговые коммуникации и PR",
-    exp_6_desc: "Я выравниваю брендовые сообщения, корпоративные коммуникации, медиа-отношения и восприятие аудитории.",
+    exp_6_desc: "Я обеспечиваю согласованность между сообщением бренда, корпоративными коммуникациями, отношениями со СМИ и восприятием аудитории.",
 
     // Index - Approach
     approach_label: "МОЙ ПОДХОД",
-    approach_title: "Эффективный маркетинг делает больше, чем привлекает внимание",
+    approach_title: "Эффективный маркетинг делает больше, чем просто привлекает внимание",
     approach_desc: "Он достигает нужной аудитории, создаёт конкурентное преимущество и способствует измеримому росту бизнеса.",
     flow_1: "Бизнес-цель",
     flow_2: "Рынок и аудитория",
     flow_3: "Стратегия",
-    flow_4: "Исполнение",
+    flow_4: "Реализация",
     flow_5: "Измерение",
     flow_end: "Рост",
 
     // Index - Training
-    training_label: "ТРЕНИНГИ И КОНСУЛЬТАЦИИ",
-    training_title: "Знания создают ценность, когда их применяют",
-    training_desc: "Практические программы развития, построенные на основе реальных маркетинговых проблем, профессиональных целей и потребностей бизнеса.",
-    training_1: "Индивидуальные тренинги и консультации",
-    training_1_desc: "Персональные сессии для специалистов, руководителей и предпринимателей, которые хотят укрепить свои маркетинговые знания и навыки принятия решений.",
-    training_2: "Корпоративные тренинги",
-    training_2_desc: "Индивидуальные программы, разработанные с учётом отрасли компании, её целей, структуры команды и уровня маркетинговой зрелости.",
-    training_3: "Практические семинары",
-    training_3_desc: "Практические семинары для маркетинговых, продажных, управленческих и кроссфункциональных команд с использованием реальных бизнес-кейсов и действенных инструментов.",
+    training_label: "ОБУЧЕНИЕ И КОНСУЛЬТАЦИИ",
+    training_title: "Знания создают ценность, когда применяются на практике",
+    training_desc: "Практические программы развития, построенные вокруг реальных маркетинговых задач, профессиональных целей и потребностей бизнеса.",
+    training_1: "Индивидуальное обучение и консультации",
+    training_1_desc: "Персонализированные сессии для специалистов, руководителей и предпринимателей, которые хотят укрепить знания в маркетинге и повысить качество принимаемых решений.",
+    training_2: "Корпоративное обучение",
+    training_2_desc: "Специальные программы, разработанные с учётом отрасли, целей, структуры команды и уровня маркетинговой зрелости компании.",
+    training_3: "Практические воркшопы",
+    training_3_desc: "Практические занятия для команд маркетинга, продаж, управления и других подразделений, основанные на реальных бизнес-кейсах и прикладных инструментах.",
 
     // Contact
-    contact_title: "Я открыт для обсуждения новых проектов и возможностей сотрудничества",
-    contact_desc: "Давайте обсудим не только то, где сегодня ваш бренд, но и то, куда он может пойти в будущем.",
+    contact_title: "Я открыт к обсуждению новых проектов и возможностей для сотрудничества",
+    contact_desc: "Давайте обсудим не только то, где ваш бренд находится сегодня, но и то, куда он может прийти завтра.",
 
     // Footer
-    footer_copy: "© 2026 Тургут Хамид — Лидер маркетинга и коммуникаций"
+    footer_copy: "© 2026 Turgut Hamid — Руководитель по маркетингу и коммуникациям"
   }
 };
 
