@@ -84,16 +84,34 @@
   </style>
 </head>
 <body>
+<script src="/lang/translations.js"></script>
 <header>
   <a href="/"><img src="/logo.png" alt="Turgut Hamid" class="logo"></a>
   <nav>
-    <a href="/">Home</a>
-    <a href="/about.html">About</a>
-    <a href="/programmes.html">Training</a>
-    <a href="https://wa.me/994512062576" class="btn-contact">Contact Me</a>
+    <a href="/" data-i18n="nav_about">Home</a>
+    <a href="/about.html" data-i18n="nav_expertise">About</a>
+    <a href="/programmes.html" data-i18n="nav_training">Training</a>
+    <a href="https://wa.me/994512062576" class="btn-contact" data-i18n="btn_contact">Contact Me</a>
   </nav>
 </header>
-<script src="lang/translations.js"></script>
+<script>
+  function translatePage() {
+    const elements = document.querySelectorAll('[data-i18n]');
+    elements.forEach(el => {
+      const key = el.getAttribute('data-i18n');
+      const translation = t(key);
+      if (translation.includes('<')) {
+        el.innerHTML = translation;
+      } else {
+        el.textContent = translation;
+      }
+    });
+  }
+
+  window.addEventListener('DOMContentLoaded', function() {
+    translatePage();
+  });
+</script>
 <style>
   .lang-btn { background: none; border: none; color: #8FA69A; font-size: 12px; font-weight: 600; cursor: pointer; padding: 8px; }
 </style>
@@ -140,7 +158,7 @@
   </div>
 </section>
 <footer>
-  <div>© 2026 Turgut Hamid — Marketing and Communications Leader</div>
+  <div data-i18n="footer_copy">© 2026 Turgut Hamid — Marketing and Communications Leader</div>
   <div style="display:flex;gap:26px">
     <a href="https://www.linkedin.com/in/turguthamid">LinkedIn</a>
     <a href="https://wa.me/994512062576">WhatsApp</a>

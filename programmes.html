@@ -82,16 +82,34 @@
   </style>
 </head>
 <body>
+<script src="/lang/translations.js"></script>
 <header>
   <a href="/"><img src="/logo.png" alt="Turgut Hamid" class="logo"></a>
   <nav>
-    <a href="/">Home</a>
-    <a href="/about.html">About</a>
-    <a href="/programmes.html">Training</a>
-    <a href="https://wa.me/994512062576" class="btn-contact">Contact Me</a>
+    <a href="/" data-i18n="nav_about">Home</a>
+    <a href="/about.html" data-i18n="nav_expertise">About</a>
+    <a href="/programmes.html" data-i18n="nav_training">Training</a>
+    <a href="https://wa.me/994512062576" class="btn-contact" data-i18n="btn_contact">Contact Me</a>
   </nav>
 </header>
-<script src="lang/translations.js"></script>
+<script>
+  function translatePage() {
+    const elements = document.querySelectorAll('[data-i18n]');
+    elements.forEach(el => {
+      const key = el.getAttribute('data-i18n');
+      const translation = t(key);
+      if (translation.includes('<')) {
+        el.innerHTML = translation;
+      } else {
+        el.textContent = translation;
+      }
+    });
+  }
+
+  window.addEventListener('DOMContentLoaded', function() {
+    translatePage();
+  });
+</script>
 <style>
   .lang-btn { background: none; border: none; color: #8FA69A; font-size: 12px; font-weight: 600; cursor: pointer; padding: 8px; }
 </style>
@@ -100,17 +118,17 @@
   <div style="font-size:13px;font-weight:600;letter-spacing:0.14em;color:#31C878;margin-bottom:18px">
     <a href="/" style="color:#5F6D66">HOME</a>
     <span style="color:#5F6D66">/</span>
-    <span>TRAINING AND CONSULTING</span>
+    <span data-i18n="training_label">TRAINING AND CONSULTING</span>
   </div>
   <div class="hero">
-    <h1>Knowledge creates value when it can be applied</h1>
-    <p>Practical development programmes built around real marketing challenges, professional goals, and business needs.</p>
+    <h1 data-i18n="training_title">Knowledge creates value when it can be applied</h1>
+    <p data-i18n="training_desc">Practical development programmes built around real marketing challenges, professional goals, and business needs.</p>
   </div>
 </div>
 
 <div class="programmes-grid">
   <div class="programme-card">
-    <h3>Individual Training and Consulting</h3>
+    <h3 data-i18n="training_1">Individual Training and Consulting</h3>
     <div class="programme-list">
       <div class="programme-item"><span class="bullet">—</span>Personalised marketing development</div>
       <div class="programme-item"><span class="bullet">—</span>Marketing strategy and planning</div>
@@ -123,7 +141,7 @@
   </div>
 
   <div class="programme-card">
-    <h3>Corporate Training</h3>
+    <h3 data-i18n="training_2">Corporate Training</h3>
     <div class="programme-list">
       <div class="programme-item"><span class="bullet">—</span>Marketing strategy development</div>
       <div class="programme-item"><span class="bullet">—</span>Brand positioning workshops</div>
@@ -136,7 +154,7 @@
   </div>
 
   <div class="programme-card">
-    <h3>Practical Workshops</h3>
+    <h3 data-i18n="training_3">Practical Workshops</h3>
     <div class="programme-list">
       <div class="programme-item"><span class="bullet">—</span>Marketing strategy development</div>
       <div class="programme-item"><span class="bullet">—</span>Brand positioning</div>
@@ -159,7 +177,7 @@
 </section>
 
 <footer>
-  <div>© 2026 Turgut Hamid — Marketing and Communications Leader</div>
+  <div data-i18n="footer_copy">© 2026 Turgut Hamid — Marketing and Communications Leader</div>
   <div style="display:flex;gap:26px">
     <a href="https://www.linkedin.com/in/turguthamid">LinkedIn</a>
     <a href="https://wa.me/994512062576">WhatsApp</a>

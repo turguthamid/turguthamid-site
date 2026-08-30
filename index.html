@@ -201,12 +201,13 @@
 </head>
 <body>
 
+<script src="/lang/translations.js"></script>
 <header>
   <img src="/logo.png" alt="Turgut Hamid" class="logo">
   <nav>
-    <a href="/">About</a>
-    <a href="#expertise">Expertise</a>
-    <a href="/programmes.html">Training</a>
+    <a href="/" data-i18n="nav_about">About</a>
+    <a href="#expertise" data-i18n="nav_expertise">Expertise</a>
+    <a href="/programmes.html" data-i18n="nav_training">Training</a>
     <div class="lang-dropdown">
       <button class="lang-toggle" id="langBtn">EN</button>
       <div class="lang-menu">
@@ -215,7 +216,7 @@
         <button onclick="switchLang('ru')">RU</button>
       </div>
     </div>
-    <a href="#contact" class="btn-contact">Contact Me</a>
+    <a href="#contact" class="btn-contact" data-i18n="btn_contact">Contact Me</a>
   </nav>
 </header>
 <script>
@@ -233,6 +234,21 @@
     document.getElementById('langBtn').textContent = currentLang.toUpperCase();
   }
 
+  // Tüm sayfayı çevir
+  function translatePage() {
+    const elements = document.querySelectorAll('[data-i18n]');
+    elements.forEach(el => {
+      const key = el.getAttribute('data-i18n');
+      const translation = t(key);
+      // Eğer çeviriye HTML varsa (örneğin <br>), innerHTML kullan
+      if (translation.includes('<')) {
+        el.innerHTML = translation;
+      } else {
+        el.textContent = translation;
+      }
+    });
+  }
+
   // Dil değiştir
   function switchLang(lang) {
     const base = window.location.pathname.split('/').slice(0, -1).join('/');
@@ -243,8 +259,11 @@
     }
   }
 
-  // Sayfa yüklenince button-u ayarla
-  updateLangButton();
+  // Sayfa yüklenince
+  window.addEventListener('DOMContentLoaded', function() {
+    updateLangButton();
+    translatePage();
+  });
 </script>
 <style>
   .lang-dropdown { position: relative; }
@@ -260,24 +279,24 @@
 
 <section class="hero">
   <div>
-    <h1>I turn marketing ideas into measurable business results</h1>
-    <p>I'm Turgut Hamid, a marketing and communications leader with over 12 years of experience in building brands, marketing systems, and international market strategies.</p>
+    <h1 data-i18n="hero_title">I turn marketing ideas into measurable business results</h1>
+    <p data-i18n="hero_desc">I'm Turgut Hamid, a marketing and communications leader with over 12 years of experience in building brands, marketing systems, and international market strategies.</p>
     <div class="hero-cta">
-      <a href="#contact" class="btn-primary">Contact Me</a>
-      <a href="#expertise" class="btn-secondary">View My Projects →</a>
+      <a href="#contact" class="btn-primary" data-i18n="btn_contact">Contact Me</a>
+      <a href="#expertise" class="btn-secondary" data-i18n="btn_projects">View My Projects →</a>
     </div>
     <div class="hero-stats">
       <div class="stat">
         <div class="stat-value">12+</div>
-        <div class="stat-label">Years of Experience</div>
+        <div class="stat-label" data-i18n="stats_exp">Years of Experience</div>
       </div>
       <div class="stat">
         <div class="stat-value">100+</div>
-        <div class="stat-label">Brands</div>
+        <div class="stat-label" data-i18n="stats_brands">Brands</div>
       </div>
       <div class="stat">
         <div class="stat-value">9</div>
-        <div class="stat-label">Markets</div>
+        <div class="stat-label" data-i18n="stats_markets">Markets</div>
       </div>
     </div>
   </div>
@@ -293,110 +312,110 @@
 </section>
 
 <div class="markets">
-  <div class="markets-label">9 MARKETS</div>
-  <div class="markets-list">Azerbaijan · Georgia · Uzbekistan · Russia · Türkiye · Israel · United Kingdom · Canada · United States</div>
+  <div class="markets-label" data-i18n="markets_title">9 MARKETS</div>
+  <div class="markets-list" data-i18n="markets_list">Azerbaijan · Georgia · Uzbekistan · Russia · Türkiye · Israel · United Kingdom · Canada · United States</div>
 </div>
 
 <section class="about-section">
   <div>
-    <div class="about-label">ABOUT ME</div>
-    <h2>I think creatively.<br>I manage systematically.<br>I measure by results.</h2>
+    <div class="about-label" data-i18n="about_label">ABOUT ME</div>
+    <h2 data-i18n="about_title">I think creatively.<br>I manage systematically.<br>I measure by results.</h2>
   </div>
   <div class="about-content">
-    <p>I began my professional career in media and communications. My experience in television and journalism taught me how to understand people, connect with audiences, communicate clear messages, and build compelling stories.</p>
-    <p>Today, I combine creative thinking with business strategy and data to support brands in market development, localisation, and marketing communications across nine markets.</p>
-    <a href="/about.html">Read the Full Story →</a>
+    <p data-i18n="about_text1">I began my professional career in media and communications. My experience in television and journalism taught me how to understand people, connect with audiences, communicate clear messages, and build compelling stories.</p>
+    <p data-i18n="about_text2">Today, I combine creative thinking with business strategy and data to support brands in market development, localisation, and marketing communications across nine markets.</p>
+    <a href="/about.html" data-i18n="about_link">Read the Full Story →</a>
   </div>
 </section>
 
 <section class="expertise-section" id="expertise">
-  <div class="about-label">EXPERTISE</div>
-  <h2>What I Do</h2>
+  <div class="about-label" data-i18n="expertise_label">EXPERTISE</div>
+  <h2 data-i18n="expertise_title">What I Do</h2>
   <div class="expertise-list">
     <a href="expertise-marketing-strategy.html" class="expertise-item">
       <div class="expertise-number">01</div>
-      <div class="expertise-title">Marketing Strategy</div>
-      <div class="expertise-desc">I translate business objectives into clear priorities, actionable plans, budgets, and measurable performance indicators.</div>
+      <div class="expertise-title" data-i18n="exp_1_title">Marketing Strategy</div>
+      <div class="expertise-desc" data-i18n="exp_1_desc">I translate business objectives into clear priorities, actionable plans, budgets, and measurable performance indicators.</div>
       <div class="expertise-arrow">→</div>
     </a>
     <a href="expertise-brand-strategy.html" class="expertise-item">
       <div class="expertise-number">02</div>
-      <div class="expertise-title">Brand Strategy and Management</div>
-      <div class="expertise-desc">I define how a brand should be positioned, differentiated, and communicated in the market.</div>
+      <div class="expertise-title" data-i18n="exp_2_title">Brand Strategy and Management</div>
+      <div class="expertise-desc" data-i18n="exp_2_desc">I build clear and distinctive brand positions that guide communication, customer experience, and long-term growth.</div>
       <div class="expertise-arrow">→</div>
     </a>
     <a href="expertise-international-market-entry.html" class="expertise-item">
       <div class="expertise-number">03</div>
-      <div class="expertise-title">International Market Entry</div>
-      <div class="expertise-desc">I adapt global strategies to local audiences, cultural contexts, commercial realities, and consumer behaviours.</div>
+      <div class="expertise-title" data-i18n="exp_3_title">International Market Entry</div>
+      <div class="expertise-desc" data-i18n="exp_3_desc">I adapt global strategies to local audiences, cultural contexts, commercial realities, and consumer behaviours.</div>
       <div class="expertise-arrow">→</div>
     </a>
     <a href="expertise-digital-marketing.html" class="expertise-item">
       <div class="expertise-number">04</div>
-      <div class="expertise-title">Digital Marketing</div>
-      <div class="expertise-desc">I connect content, paid media, social platforms, CRM, and analytics within a unified digital ecosystem.</div>
+      <div class="expertise-title" data-i18n="exp_4_title">Digital Marketing</div>
+      <div class="expertise-desc" data-i18n="exp_4_desc">I connect content, paid media, social platforms, CRM, and analytics within a unified digital ecosystem.</div>
       <div class="expertise-arrow">→</div>
     </a>
     <a href="expertise-marketing-structure.html" class="expertise-item">
       <div class="expertise-number">05</div>
-      <div class="expertise-title">Marketing Structure Development</div>
-      <div class="expertise-desc">I build marketing systems based on clear roles, efficient processes, accountability, and measurable performance.</div>
+      <div class="expertise-title" data-i18n="exp_5_title">Marketing Structure Development</div>
+      <div class="expertise-desc" data-i18n="exp_5_desc">I build marketing systems based on clear roles, efficient processes, accountability, and measurable performance.</div>
       <div class="expertise-arrow">→</div>
     </a>
     <a href="expertise-communications-pr.html" class="expertise-item">
       <div class="expertise-number">06</div>
-      <div class="expertise-title">Marketing Communications and PR</div>
-      <div class="expertise-desc">I align brand messaging, corporate communications, media relations, and audience perception.</div>
+      <div class="expertise-title" data-i18n="exp_6_title">Marketing Communications and PR</div>
+      <div class="expertise-desc" data-i18n="exp_6_desc">I align brand messaging, corporate communications, media relations, and audience perception.</div>
       <div class="expertise-arrow">→</div>
     </a>
   </div>
 </section>
 
 <section class="approach">
-  <div class="about-label">MY APPROACH</div>
-  <h2>Effective marketing does more than attract attention</h2>
-  <p>It reaches the right audience, creates a competitive advantage, and contributes to measurable business growth.</p>
+  <div class="about-label" data-i18n="approach_label">MY APPROACH</div>
+  <h2 data-i18n="approach_title">Effective marketing does more than attract attention</h2>
+  <p data-i18n="approach_desc">It reaches the right audience, creates a competitive advantage, and contributes to measurable business growth.</p>
   <div class="approach-flow">
-    <span class="flow-badge">Business Objective</span>
+    <span class="flow-badge" data-i18n="flow_1">Business Objective</span>
     <span class="flow-arrow">→</span>
-    <span class="flow-badge">Market and Audience</span>
+    <span class="flow-badge" data-i18n="flow_2">Market and Audience</span>
     <span class="flow-arrow">→</span>
-    <span class="flow-badge">Strategy</span>
+    <span class="flow-badge" data-i18n="flow_3">Strategy</span>
     <span class="flow-arrow">→</span>
-    <span class="flow-badge">Execution</span>
+    <span class="flow-badge" data-i18n="flow_4">Execution</span>
     <span class="flow-arrow">→</span>
-    <span class="flow-badge">Measurement</span>
+    <span class="flow-badge" data-i18n="flow_5">Measurement</span>
     <span class="flow-arrow">→</span>
-    <span class="flow-badge flow-end">Growth</span>
+    <span class="flow-badge flow-end" data-i18n="flow_end">Growth</span>
   </div>
 </section>
 
 <section class="training-section">
   <div class="training-header">
     <div>
-      <div class="about-label">TRAINING AND CONSULTING</div>
-      <h2>Knowledge creates value when it can be applied</h2>
-      <p>Practical development programmes built around real marketing challenges, professional goals, and business needs.</p>
+      <div class="about-label" data-i18n="training_label">TRAINING AND CONSULTING</div>
+      <h2 data-i18n="training_title">Knowledge creates value when it can be applied</h2>
+      <p data-i18n="training_desc">Practical development programmes built around real marketing challenges, professional goals, and business needs.</p>
     </div>
     <a href="/programmes.html">View All Programmes →</a>
   </div>
   <div class="training-card">
-    <h3>Individual Training and Consulting</h3>
-    <p>Personalised sessions for professionals, executives, and entrepreneurs who want to strengthen their marketing knowledge and decision-making.</p>
+    <h3 data-i18n="training_1">Individual Training and Consulting</h3>
+    <p data-i18n="training_1_desc">Personalised sessions for professionals, executives, and entrepreneurs who want to strengthen their marketing knowledge and decision-making.</p>
   </div>
   <div class="training-card">
-    <h3>Corporate Training</h3>
-    <p>Custom programmes designed around each company's industry, objectives, team structure, and level of marketing maturity.</p>
+    <h3 data-i18n="training_2">Corporate Training</h3>
+    <p data-i18n="training_2_desc">Custom programmes designed around each company's industry, objectives, team structure, and level of marketing maturity.</p>
   </div>
   <div class="training-card">
-    <h3>Workshops</h3>
-    <p>Practical workshops for marketing, sales, management, and cross-functional teams, using real business cases and actionable tools.</p>
+    <h3 data-i18n="training_3">Workshops</h3>
+    <p data-i18n="training_3_desc">Practical workshops for marketing, sales, management, and cross-functional teams, using real business cases and actionable tools.</p>
   </div>
 </section>
 
 <section class="contact-cta" id="contact">
-  <h2>I am open to discussing new projects and collaboration opportunities</h2>
-  <p>Let's discuss not only where your brand is today, but also where it can go next.</p>
+  <h2 data-i18n="contact_title">I am open to discussing new projects and collaboration opportunities</h2>
+  <p data-i18n="contact_desc">Let's discuss not only where your brand is today, but also where it can go next.</p>
   <div class="contact-buttons">
     <a href="https://wa.me/994512062576" class="btn-whatsapp">WhatsApp · +994 51 206 25 76</a>
     <a href="https://www.linkedin.com/in/turguthamid" class="btn-linkedin">LinkedIn</a>
@@ -404,7 +423,7 @@
 </section>
 
 <footer>
-  <div>© 2026 Turgut Hamid — Marketing and Communications Leader</div>
+  <div data-i18n="footer_copy">© 2026 Turgut Hamid — Marketing and Communications Leader</div>
   <div class="footer-links">
     <a href="https://www.linkedin.com/in/turguthamid">LinkedIn</a>
     <a href="https://wa.me/994512062576">WhatsApp</a>

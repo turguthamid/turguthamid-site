@@ -77,15 +77,41 @@
   </style>
 </head>
 <body>
+<script src="/lang/translations.js"></script>
 <div style="display:flex;justify-content:space-between;align-items:center;padding:24px 96px;border-bottom:1px solid rgba(255,255,255,.06)">
   <a href="/" style="display:block"><img src="/logo.png" alt="Turgut Hamid" style="height:104px;opacity:.85;display:block;mix-blend-mode:screen"></a>
   <div style="display:flex;align-items:center;gap:40px;font-size:14.5px;color:#8FA69A">
-    <a href="/">Home</a><a href="/about.html">About</a><a href="/programmes.html">Training</a>
-    <a href="https://wa.me/994512062576" style="color:#F2F6F4;font-weight:600;border:1px solid rgba(255,255,255,.2);padding:10px 24px;border-radius:999px">Contact Me</a>
+    <a href="/" data-i18n="nav_about">Home</a><a href="/about.html" data-i18n="nav_expertise">About</a><a href="/programmes.html" data-i18n="nav_training">Training</a>
+    <a href="https://wa.me/994512062576" style="color:#F2F6F4;font-weight:600;border:1px solid rgba(255,255,255,.2);padding:10px 24px;border-radius:999px" data-i18n="btn_contact">Contact Me</a>
   </div>
 </div>
+<script>
+  function getCurrentLang() {
+    const path = window.location.pathname;
+    if (path.includes('/az')) return 'az';
+    if (path.includes('/ru')) return 'ru';
+    return 'en';
+  }
+
+  function translatePage() {
+    const elements = document.querySelectorAll('[data-i18n]');
+    elements.forEach(el => {
+      const key = el.getAttribute('data-i18n');
+      const translation = t(key);
+      if (translation.includes('<')) {
+        el.innerHTML = translation;
+      } else {
+        el.textContent = translation;
+      }
+    });
+  }
+
+  window.addEventListener('DOMContentLoaded', function() {
+    translatePage();
+  });
+</script>
 <div style="padding:90px 96px 70px;max-width:860px">
-  <div style="display:flex;align-items:center;gap:14px;font-size:13px;font-weight:600;letter-spacing:.14em;color:#31C878;margin-bottom:18px"><a href="/" style="color:#5F6D66">HOME</a><span style="color:#5F6D66">/</span>ABOUT ME</div>
+  <div style="display:flex;align-items:center;gap:14px;font-size:13px;font-weight:600;letter-spacing:.14em;color:#31C878;margin-bottom:18px"><a href="/" style="color:#5F6D66">HOME</a><span style="color:#5F6D66">/</span><span data-i18n="about_label">ABOUT ME</span></div>
   <h1 style="font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;font-size:46px;line-height:1.2;letter-spacing:-.025em;color:#F2F6F4;margin:0 0 32px;text-wrap:balance">I think creatively. I manage systematically. I measure by results.</h1>
   <div style="display:flex;flex-direction:column;gap:20px;font-size:16.5px;line-height:1.8;color:#B8C6BF">
     <p style="margin:0">I began my professional career in media and communications. My experience in television and journalism taught me how to understand people, connect with audiences, communicate clear messages, and build compelling stories.</p>
@@ -105,7 +131,7 @@
   </div>
 </div>
 <div style="display:flex;justify-content:space-between;align-items:center;padding:32px 96px;border-top:1px solid rgba(255,255,255,.06);font-size:13px;color:#5F6D66">
-  <div>© 2026 Turgut Hamid — Marketing and Communications Leader</div>
+  <div data-i18n="footer_copy">© 2026 Turgut Hamid — Marketing and Communications Leader</div>
   <div style="display:flex;gap:26px"><a href="https://www.linkedin.com/in/turguthamid">LinkedIn</a><a href="https://wa.me/994512062576">WhatsApp</a></div>
 </div>
 </body>
