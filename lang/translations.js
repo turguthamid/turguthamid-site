@@ -231,6 +231,11 @@ function setLanguage(lang) {
 }
 
 function getLanguage() {
+  // URL-dən dili əvvəl yoxla
+  const path = window.location.pathname;
+  if (path.includes('/az')) return 'az';
+  if (path.includes('/ru')) return 'ru';
+  // Sonra localStorage-dən
   return localStorage.getItem('selectedLanguage') || 'en';
 }
 
