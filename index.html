@@ -204,21 +204,31 @@
 <header>
   <img src="logo.png" alt="Turgut Hamid" class="logo">
   <nav>
-    <a href="about.html" class="nav-link" data-key="nav_about">About</a>
-    <a href="#expertise" class="nav-link" data-key="nav_training">Expertise</a>
-    <a href="programmes.html" class="nav-link" data-key="nav_training">Training</a>
-    <div style="display:flex;gap:8px;align-items:center">
-      <button onclick="setLanguage('en')" class="lang-btn" style="opacity:0.6">EN</button>
-      <button onclick="setLanguage('az')" class="lang-btn" style="opacity:0.6">AZ</button>
-      <button onclick="setLanguage('ru')" class="lang-btn" style="opacity:0.6">RU</button>
-      <a href="#contact" class="btn-contact" data-key="nav_contact">Contact Me</a>
+    <a href="about.html">About</a>
+    <a href="#expertise">Expertise</a>
+    <a href="programmes.html">Training</a>
+    <div class="lang-dropdown">
+      <button class="lang-toggle">🌐 Language</button>
+      <div class="lang-menu">
+        <button onclick="setLanguage('en')">English</button>
+        <button onclick="setLanguage('az')">Azərbaycanca</button>
+        <button onclick="setLanguage('ru')">Русский</button>
+      </div>
     </div>
+    <a href="#contact" class="btn-contact">Contact Me</a>
   </nav>
 </header>
 <script src="lang/translations.js"></script>
 <style>
-  .lang-btn { background: none; border: none; color: #8FA69A; font-size: 12px; font-weight: 600; cursor: pointer; padding: 8px; transition: opacity 0.2s; }
-  .lang-btn:hover { opacity: 1 !important; }
+  .lang-dropdown { position: relative; }
+  .lang-toggle { background: none; border: none; color: #8FA69A; font-size: 14px; cursor: pointer; padding: 8px 12px; transition: opacity 0.2s; white-space: nowrap; }
+  .lang-toggle:hover { opacity: 1; }
+  .lang-menu { display: none; position: absolute; top: 100%; right: 0; background: #1a1f1e; border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 8px; min-width: 140px; z-index: 1000; }
+  .lang-dropdown:hover .lang-menu { display: flex; flex-direction: column; }
+  .lang-menu button { background: none; border: none; color: #B8C6BF; text-align: left; padding: 10px 16px; cursor: pointer; font-size: 13px; width: 100%; transition: all 0.2s; }
+  .lang-menu button:hover { background: rgba(49, 200, 120, 0.1); color: #31C878; }
+  .lang-menu button:first-child { border-radius: 7px 7px 0 0; }
+  .lang-menu button:last-child { border-radius: 0 0 7px 7px; }
 </style>
 
 <section class="hero">
