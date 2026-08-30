@@ -1,83 +1,164 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Training and Consulting Programmes — Turgut Hamid</title>
-<meta name="description" content="Individual consulting, corporate training, and practical workshops built around real marketing challenges, professional goals, and business needs.">
-
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
-<style>
-body{margin:0;background:#0C0F0E;font-family:'IBM Plex Sans',system-ui,sans-serif}
-a{color:inherit;text-decoration:none}a:hover{opacity:.85}
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Training and Consulting Programmes — Turgut Hamid</title>
+  <meta name="description" content="Individual consulting, corporate training, and practical workshops built around real marketing challenges, professional goals, and business needs.">
+  <meta property="og:title" content="Training Programmes — Turgut Hamid">
+  <meta property="og:type" content="website">
+  <link rel="canonical" href="https://turguthamid.com/programmes">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; background: #0C0F0E; font-family: 'IBM Plex Sans', system-ui, sans-serif; color: #F2F6F4; }
+    a { color: inherit; text-decoration: none; }
+    a:hover { opacity: 0.85; }
+    h1, h2 { margin: 0; font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 800; }
+    header { display: flex; justify-content: space-between; align-items: center; padding: 24px 96px; border-bottom: 1px solid rgba(255, 255, 255, 0.06); flex-wrap: wrap; gap: 16px; }
+    nav { display: flex; gap: 40px; font-size: 14.5px; color: #8FA69A; }
+    .logo { height: 104px; opacity: 0.85; mix-blend-mode: screen; }
+    .btn-contact { color: #F2F6F4; font-weight: 600; border: 1px solid rgba(255, 255, 255, 0.2); padding: 10px 24px; border-radius: 999px; }
+    .hero { padding: 0 96px 70px; max-width: 900px; }
+    .hero h1 { font-size: 50px; line-height: 1.1; margin: 0 0 24px; letter-spacing: -0.025em; }
+    .hero p { font-size: 18px; line-height: 1.75; color: #B8C6BF; margin: 0; }
+    .programmes-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; padding: 0 96px 90px; }
+    .programme-card { border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 20px; padding: 32px; }
+    .programme-card h3 { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 700; font-size: 19px; color: #F2F6F4; margin: 0 0 20px; }
+    .programme-list { display: flex; flex-direction: column; gap: 12px; }
+    .programme-item { display: flex; gap: 12px; font-size: 14.5px; color: #B8C6BF; }
+    .bullet { color: #31C878; flex-shrink: 0; }
+    .contact-cta { margin: 0 96px 90px; border-radius: 24px; background: radial-gradient(130% 160% at 50% 0%, #1E6B44 0%, #123B28 55%, #0C1310 100%); padding: 64px; text-align: center; }
+    .contact-cta h2 { font-size: 32px; line-height: 1.2; color: #fff; max-width: 640px; margin: 0 auto 14px; }
+    .contact-cta p { font-size: 15px; color: rgba(255, 255, 255, 0.7); margin: 0 0 28px; }
+    .contact-buttons { display: flex; justify-content: center; gap: 14px; flex-wrap: wrap; }
+    .btn-whatsapp { background: #fff; color: #0C0F0E; font-weight: 700; font-size: 15px; padding: 15px 30px; border-radius: 999px; border: none; cursor: pointer; }
+    .btn-linkedin { border: 1.5px solid rgba(255, 255, 255, 0.4); color: #fff; font-weight: 600; font-size: 15px; padding: 15px 30px; border-radius: 999px; background: transparent; cursor: pointer; }
+    footer { display: flex; justify-content: space-between; padding: 32px 96px; border-top: 1px solid rgba(255, 255, 255, 0.06); font-size: 13px; color: #5F6D66; flex-wrap: wrap; gap: 16px; }
+    @media (max-width: 1024px) {
+      header { padding: 20px 48px; }
+      nav { gap: 20px; }
+      .logo { height: 80px; }
+      .hero { padding: 0 48px 70px; }
+      .hero h1 { font-size: 42px; }
+      .hero p { font-size: 16px; }
+      .programmes-grid { grid-template-columns: 1fr; gap: 20px; padding: 0 48px 80px; }
+      .contact-cta { margin: 0 48px 80px; padding: 48px 32px; }
+      footer { padding: 24px 48px; }
+    }
+    @media (max-width: 768px) {
+      header { padding: 16px 20px; }
+      nav { gap: 12px; font-size: 12px; }
+      .logo { height: 60px; }
+      .hero { padding: 0 20px 50px; }
+      .hero h1 { font-size: 32px; }
+      .hero p { font-size: 15px; }
+      .programmes-grid { gap: 16px; padding: 0 20px 60px; }
+      .programme-card { padding: 20px; }
+      .programme-card h3 { font-size: 17px; }
+      .programme-item { font-size: 13px; }
+      .contact-cta { margin: 0 20px 60px; padding: 40px 20px; }
+      .contact-cta h2 { font-size: 26px; }
+      footer { padding: 20px; font-size: 12px; }
+    }
+    @media (max-width: 480px) {
+      header { padding: 12px 14px; }
+      nav { gap: 10px; font-size: 11px; flex-direction: column; width: 100%; }
+      .logo { height: 50px; }
+      .hero { padding: 0 14px 40px; }
+      .hero h1 { font-size: 24px; }
+      .hero p { font-size: 13px; }
+      .programmes-grid { gap: 12px; padding: 0 14px 40px; }
+      .programme-card { padding: 16px; }
+      .programme-card h3 { font-size: 15px; }
+      .programme-item { font-size: 12px; }
+      .contact-cta { margin: 0 14px 40px; padding: 30px 14px; }
+      .contact-cta h2 { font-size: 22px; }
+      .btn-whatsapp, .btn-linkedin { width: 100%; }
+      footer { padding: 16px 14px; font-size: 11px; }
+    }
+  </style>
 </head>
 <body>
-<div style="display:flex;justify-content:space-between;align-items:center;padding:24px 96px;border-bottom:1px solid rgba(255,255,255,.06)">
-  <a href="index.html" style="display:block"><img src="logo.png" alt="Turgut Hamid" style="height:104px;opacity:.85;display:block;mix-blend-mode:screen"></a>
-  <div style="display:flex;align-items:center;gap:40px;font-size:14.5px;color:#8FA69A">
-    <a href="index.html">Home</a><a href="about.html">About</a><a href="programmes.html">Training</a>
-    <a href="https://wa.me/994512062576" style="color:#F2F6F4;font-weight:600;border:1px solid rgba(255,255,255,.2);padding:10px 24px;border-radius:999px">Contact Me</a>
+<header>
+  <a href="index.html"><img src="logo.png" alt="Turgut Hamid" class="logo"></a>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="programmes.html">Training</a>
+    <a href="https://wa.me/994512062576" class="btn-contact">Contact Me</a>
+  </nav>
+</header>
+
+<div style="padding:90px 96px 0;max-width:900px">
+  <div style="font-size:13px;font-weight:600;letter-spacing:0.14em;color:#31C878;margin-bottom:18px">
+    <a href="index.html" style="color:#5F6D66">HOME</a>
+    <span style="color:#5F6D66">/</span>
+    <span>TRAINING AND CONSULTING</span>
+  </div>
+  <div class="hero">
+    <h1>Knowledge creates value when it can be applied</h1>
+    <p>Practical development programmes built around real marketing challenges, professional goals, and business needs.</p>
   </div>
 </div>
-<div style="padding:90px 96px 60px;max-width:900px">
-  <div style="display:flex;align-items:center;gap:14px;font-size:13px;font-weight:600;letter-spacing:.14em;color:#31C878;margin-bottom:18px"><a href="index.html" style="color:#5F6D66">HOME</a><span style="color:#5F6D66">/</span>TRAINING AND CONSULTING</div>
-  <h1 style="font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;font-size:50px;line-height:1.1;letter-spacing:-.025em;color:#F2F6F4;margin:0 0 24px;text-wrap:balance">Knowledge creates value when it can be applied</h1>
-  <p style="font-size:18px;line-height:1.75;color:#B8C6BF;margin:0">Practical development programmes built around real marketing challenges, professional goals, and business needs.</p>
-</div>
-<div style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px;padding:0 96px 90px">
-  <div style="border:1px solid rgba(255,255,255,.08);border-radius:20px;padding:32px">
-  <div style="font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:19px;color:#F2F6F4;margin-bottom:20px">Individual Programmes</div>
-  <div style="display:flex;flex-direction:column;gap:12px;font-size:14.5px;color:#B8C6BF">
-    <div style="display:flex;gap:12px"><span style="color:#31C878">—</span>Personalised marketing development plan</div>
-    <div style="display:flex;gap:12px"><span style="color:#31C878">—</span>Marketing strategy and planning</div>
-    <div style="display:flex;gap:12px"><span style="color:#31C878">—</span>Brand management</div>
-    <div style="display:flex;gap:12px"><span style="color:#31C878">—</span>Digital marketing</div>
-    <div style="display:flex;gap:12px"><span style="color:#31C878">—</span>Performance analysis</div>
-    <div style="display:flex;gap:12px"><span style="color:#31C878">—</span>Leadership and team management</div>
-    <div style="display:flex;gap:12px"><span style="color:#31C878">—</span>Career-focused marketing mentoring</div>
-    <div style="display:flex;gap:12px"><span style="color:#31C878">—</span>Current business case consulting</div>
+
+<div class="programmes-grid">
+  <div class="programme-card">
+    <h3>Individual Training and Consulting</h3>
+    <div class="programme-list">
+      <div class="programme-item"><span class="bullet">—</span>Personalised marketing development</div>
+      <div class="programme-item"><span class="bullet">—</span>Marketing strategy and planning</div>
+      <div class="programme-item"><span class="bullet">—</span>Brand management guidance</div>
+      <div class="programme-item"><span class="bullet">—</span>Digital marketing consulting</div>
+      <div class="programme-item"><span class="bullet">—</span>Performance analysis</div>
+      <div class="programme-item"><span class="bullet">—</span>Leadership and team development</div>
+      <div class="programme-item"><span class="bullet">—</span>Career-focused mentoring</div>
+    </div>
+  </div>
+
+  <div class="programme-card">
+    <h3>Corporate Training</h3>
+    <div class="programme-list">
+      <div class="programme-item"><span class="bullet">—</span>Marketing strategy development</div>
+      <div class="programme-item"><span class="bullet">—</span>Brand positioning workshops</div>
+      <div class="programme-item"><span class="bullet">—</span>Digital marketing and measurement</div>
+      <div class="programme-item"><span class="bullet">—</span>Social media strategy</div>
+      <div class="programme-item"><span class="bullet">—</span>International market entry</div>
+      <div class="programme-item"><span class="bullet">—</span>Team structure and KPIs</div>
+      <div class="programme-item"><span class="bullet">—</span>Marketing and sales alignment</div>
+    </div>
+  </div>
+
+  <div class="programme-card">
+    <h3>Practical Workshops</h3>
+    <div class="programme-list">
+      <div class="programme-item"><span class="bullet">—</span>Marketing strategy development</div>
+      <div class="programme-item"><span class="bullet">—</span>Brand positioning</div>
+      <div class="programme-item"><span class="bullet">—</span>Market-entry planning</div>
+      <div class="programme-item"><span class="bullet">—</span>Campaign and content planning</div>
+      <div class="programme-item"><span class="bullet">—</span>Customer journey development</div>
+      <div class="programme-item"><span class="bullet">—</span>Team alignment sessions</div>
+      <div class="programme-item"><span class="bullet">—</span>Real business case analysis</div>
+    </div>
   </div>
 </div>
-  <div style="border:1px solid rgba(255,255,255,.08);border-radius:20px;padding:32px">
-  <div style="font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:19px;color:#F2F6F4;margin-bottom:20px">Corporate Programmes</div>
-  <div style="display:flex;flex-direction:column;gap:12px;font-size:14.5px;color:#B8C6BF">
-    <div style="display:flex;gap:12px"><span style="color:#31C878">—</span>Marketing strategy and annual planning</div>
-    <div style="display:flex;gap:12px"><span style="color:#31C878">—</span>Brand positioning and management</div>
-    <div style="display:flex;gap:12px"><span style="color:#31C878">—</span>Digital marketing and performance measurement</div>
-    <div style="display:flex;gap:12px"><span style="color:#31C878">—</span>Social media and content strategy</div>
-    <div style="display:flex;gap:12px"><span style="color:#31C878">—</span>International market entry</div>
-    <div style="display:flex;gap:12px"><span style="color:#31C878">—</span>Marketing team structure and KPIs</div>
-    <div style="display:flex;gap:12px"><span style="color:#31C878">—</span>Agency management</div>
-    <div style="display:flex;gap:12px"><span style="color:#31C878">—</span>AI applications in marketing</div>
-    <div style="display:flex;gap:12px"><span style="color:#31C878">—</span>Marketing and sales alignment</div>
+
+<section class="contact-cta">
+  <h2>Let's discuss your programme</h2>
+  <p>Let's discuss not only where your brand is today, but also where it can go next.</p>
+  <div class="contact-buttons">
+    <a href="https://wa.me/994512062576" class="btn-whatsapp">WhatsApp · +994 51 206 25 76</a>
+    <a href="https://www.linkedin.com/in/turguthamid" class="btn-linkedin">LinkedIn</a>
   </div>
-</div>
-  <div style="border:1px solid rgba(255,255,255,.08);border-radius:20px;padding:32px">
-  <div style="font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:19px;color:#F2F6F4;margin-bottom:20px">Practical Workshops</div>
-  <div style="display:flex;flex-direction:column;gap:12px;font-size:14.5px;color:#B8C6BF">
-    <div style="display:flex;gap:12px"><span style="color:#31C878">—</span>Marketing strategy development</div>
-    <div style="display:flex;gap:12px"><span style="color:#31C878">—</span>Brand positioning</div>
-    <div style="display:flex;gap:12px"><span style="color:#31C878">—</span>Market-entry planning</div>
-    <div style="display:flex;gap:12px"><span style="color:#31C878">—</span>Campaign and content planning</div>
-    <div style="display:flex;gap:12px"><span style="color:#31C878">—</span>Customer journey development</div>
-    <div style="display:flex;gap:12px"><span style="color:#31C878">—</span>Team alignment</div>
-    <div style="display:flex;gap:12px"><span style="color:#31C878">—</span>Real business case analysis</div>
-  </div>
-</div>
-</div>
-<div style="margin:0 96px 90px;border-radius:24px;background:radial-gradient(130% 160% at 50% 0%,#1E6B44 0%,#123B28 55%,#0C1310 100%);padding:64px;text-align:center">
-  <h2 style="font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;font-size:32px;line-height:1.2;letter-spacing:-.02em;color:#fff;margin:0 auto 14px;max-width:640px">Let's discuss your project</h2>
-  <p style="font-size:15px;color:rgba(255,255,255,.7);margin:0 0 28px">Let's discuss not only where your brand is today, but also where it can go next.</p>
-  <div style="display:flex;justify-content:center;gap:14px">
-    <a href="https://wa.me/994512062576" style="background:#fff;color:#0C0F0E;font-weight:700;font-size:15px;padding:15px 30px;border-radius:999px">WhatsApp · +994 51 206 25 76</a>
-    <a href="https://www.linkedin.com/in/turguthamid" style="border:1.5px solid rgba(255,255,255,.4);color:#fff;font-weight:600;font-size:15px;padding:15px 30px;border-radius:999px">LinkedIn</a>
-  </div>
-</div>
-<div style="display:flex;justify-content:space-between;align-items:center;padding:32px 96px;border-top:1px solid rgba(255,255,255,.06);font-size:13px;color:#5F6D66">
+</section>
+
+<footer>
   <div>© 2026 Turgut Hamid — Marketing and Communications Leader</div>
-  <div style="display:flex;gap:26px"><a href="https://www.linkedin.com/in/turguthamid">LinkedIn</a><a href="https://wa.me/994512062576">WhatsApp</a></div>
-</div>
+  <div style="display:flex;gap:26px">
+    <a href="https://www.linkedin.com/in/turguthamid">LinkedIn</a>
+    <a href="https://wa.me/994512062576">WhatsApp</a>
+  </div>
+</footer>
 </body>
 </html>
