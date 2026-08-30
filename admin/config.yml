@@ -1,9 +1,6 @@
 backend:
-  name: github
-  repo: turguthamid/turguthamid-site
+  name: git-gateway
   branch: main
-  base_url: https://cozy-twilight-20476f.netlify.app
-  auth_endpoint: api/auth
 
 media_folder: "."
 public_folder: "/"
@@ -19,17 +16,9 @@ collections:
         label: Home
         file: index.html
         fields:
-          - { name: title, label: Title, widget: string }
-          - { name: description, label: Meta Description, widget: text }
+          - { name: title, label: Page Title, widget: string }
       - name: about
         label: About
         file: about.html
         fields:
-          - { name: title, label: Title, widget: string }
-          - { name: description, label: Meta Description, widget: text }
-      - name: programmes
-        label: Training Programmes
-        file: programmes.html
-        fields:
-          - { name: title, label: Title, widget: string }
-          - { name: description, label: Meta Description, widget: text }
+          - { name: title, label: Page Title, widget: string }
