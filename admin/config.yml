@@ -2,11 +2,12 @@ backend:
   name: github
   repo: turguthamid/turguthamid-site
   branch: main
-  auth_endpoint: api/auth
   base_url: https://cozy-twilight-20476f.netlify.app
+  auth_endpoint: api/auth
 
-media_folder: ""
-public_folder: ""
+media_folder: "."
+public_folder: "/"
+site_url: https://cozy-twilight-20476f.netlify.app
 
 collections:
   - name: pages
