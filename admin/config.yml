@@ -1,6 +1,9 @@
 backend:
-  name: git-gateway
+  name: github
+  repo: turguthamid/turguthamid-site
   branch: main
+  base_url: https://cozy-twilight-20476f.netlify.app
+  auth_endpoint: api/auth
 
 media_folder: "."
 public_folder: "/"
