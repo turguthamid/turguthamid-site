@@ -233,10 +233,22 @@ function setLanguage(lang) {
 function getLanguage() {
   // URL-dən dili əvvəl yoxla
   const path = window.location.pathname;
-  if (path.includes('/az')) return 'az';
-  if (path.includes('/ru')) return 'ru';
+  console.log('📍 Detected path:', path);
+
+  if (path.includes('/az')) {
+    console.log('✓ Azerbaijani detected');
+    return 'az';
+  }
+  if (path.includes('/ru')) {
+    console.log('✓ Russian detected');
+    return 'ru';
+  }
   // Sonra localStorage-dən
-  return localStorage.getItem('selectedLanguage') || 'en';
+  const stored = localStorage.getItem('selectedLanguage');
+  console.log('💾 Stored language:', stored);
+  const lang = stored || 'en';
+  console.log('🌍 Final language:', lang);
+  return lang;
 }
 
 function t(key) {
