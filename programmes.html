@@ -12,6 +12,12 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
   <style>
+  .lang-dropdown{position:relative}
+  .lang-toggle{background:none;border:none;color:#8FA69A;font-size:14px;font-weight:600;cursor:pointer;padding:8px 12px;white-space:nowrap}
+  .lang-menu{display:none;position:absolute;top:100%;right:0;background:#1a1f1e;border:1px solid rgba(255,255,255,.1);border-radius:8px;min-width:100px;z-index:1000}
+  .lang-dropdown:hover .lang-menu{display:flex;flex-direction:column}
+  .lang-menu button{background:none;border:none;color:#B8C6BF;text-align:center;padding:10px 16px;cursor:pointer;font-size:13px;font-weight:600;width:100%;transition:all .2s}
+  .lang-menu button:hover{background:rgba(49,200,120,.1);color:#31C878}
     * { box-sizing: border-box; }
     body { margin: 0; background: #0C0F0E; font-family: 'IBM Plex Sans', system-ui, sans-serif; color: #F2F6F4; }
     a { color: inherit; text-decoration: none; }
@@ -83,13 +89,20 @@
 <script src="/lang/translations.js"></script>
 </head>
 <body>
-<script src="/lang/translations.js"></script>
 <header>
   <a href="/"><img src="/logo.png" alt="Turgut Hamid" class="logo"></a>
   <nav>
     <a href="/">Home</a>
     <a href="/about.html" data-i18n="nav_about">About</a>
     <a href="/programmes.html" data-i18n="nav_training">Training</a>
+    <div class="lang-dropdown">
+      <button class="lang-toggle" id="langBtn">EN</button>
+      <div class="lang-menu">
+        <button onclick="switchLang('en')">EN</button>
+        <button onclick="switchLang('az')">AZ</button>
+        <button onclick="switchLang('ru')">RU</button>
+      </div>
+    </div>
     <a href="https://wa.me/994512062576" class="btn-contact" data-i18n="btn_contact">Contact Me</a>
   </nav>
 </header>
@@ -131,6 +144,12 @@
   });
 </script>
 <style>
+  .lang-dropdown{position:relative}
+  .lang-toggle{background:none;border:none;color:#8FA69A;font-size:14px;font-weight:600;cursor:pointer;padding:8px 12px;white-space:nowrap}
+  .lang-menu{display:none;position:absolute;top:100%;right:0;background:#1a1f1e;border:1px solid rgba(255,255,255,.1);border-radius:8px;min-width:100px;z-index:1000}
+  .lang-dropdown:hover .lang-menu{display:flex;flex-direction:column}
+  .lang-menu button{background:none;border:none;color:#B8C6BF;text-align:center;padding:10px 16px;cursor:pointer;font-size:13px;font-weight:600;width:100%;transition:all .2s}
+  .lang-menu button:hover{background:rgba(49,200,120,.1);color:#31C878}
   .lang-btn { background: none; border: none; color: #8FA69A; font-size: 12px; font-weight: 600; cursor: pointer; padding: 8px; }
 </style>
 
