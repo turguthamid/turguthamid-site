@@ -1,7 +1,12 @@
-# Language routing
-/az/*    /index.html    200
-/ru/*    /index.html    200
-/en/*    /index.html    200
+# Language path redirects to root with language preserved
+/az/       /              200
+/ru/       /              200
+/en/       /              200
+
+# Route language-prefixed file requests back to root
+/az/*.html  /:splat.html   200
+/ru/*.html  /:splat.html   200
+/en/*.html  /:splat.html   200
 
 # Catch-all
 /*    /index.html    200
