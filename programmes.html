@@ -94,6 +94,29 @@
   </nav>
 </header>
 <script>
+  function getCurrentLang() {
+    const path = window.location.pathname;
+    if (path.includes('/az')) return 'az';
+    if (path.includes('/ru')) return 'ru';
+    return 'en';
+  }
+
+  function updateLangButton() {
+    const currentLang = getCurrentLang();
+    document.getElementById('langBtn').textContent = currentLang.toUpperCase();
+  }
+
+  function switchLang(lang) {
+    localStorage.setItem('selectedLanguage', lang);
+    const currentPath = window.location.pathname;
+    let newPath = currentPath.replace(/^\/(az|ru)/, '');
+    if (lang === 'en') {
+      window.location.href = newPath;
+    } else {
+      window.location.href = '/' + lang + newPath;
+    }
+  }
+
   function translatePage() {
     const elements = document.querySelectorAll('[data-i18n]');
     elements.forEach(el => {

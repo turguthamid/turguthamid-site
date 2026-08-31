@@ -37,6 +37,13 @@
     .btn-whatsapp { background: #fff; color: #0C0F0E; font-weight: 700; font-size: 15px; padding: 15px 30px; border-radius: 999px; border: none; cursor: pointer; }
     .btn-linkedin { border: 1.5px solid rgba(255, 255, 255, 0.4); color: #fff; font-weight: 600; font-size: 15px; padding: 15px 30px; border-radius: 999px; background: transparent; cursor: pointer; }
     footer { display: flex; justify-content: space-between; padding: 32px 96px; border-top: 1px solid rgba(255, 255, 255, 0.06); font-size: 13px; color: #5F6D66; flex-wrap: wrap; gap: 16px; }
+    .lang-dropdown { position: relative; }
+    .lang-toggle { background: none; border: none; color: #8FA69A; font-size: 14px; font-weight: 600; cursor: pointer; padding: 8px 12px; transition: opacity 0.2s; white-space: nowrap; }
+    .lang-toggle:hover { opacity: 1; color: #31C878; }
+    .lang-menu { display: none; position: absolute; top: 100%; right: 0; background: #1a1f1e; border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 8px; min-width: 100px; z-index: 1000; }
+    .lang-dropdown:hover .lang-menu { display: flex; flex-direction: column; }
+    .lang-menu button { background: none; border: none; color: #B8C6BF; text-align: center; padding: 10px 16px; cursor: pointer; font-size: 13px; font-weight: 600; width: 100%; transition: all 0.2s; }
+    .lang-menu button:hover { background: rgba(49, 200, 120, 0.1); color: #31C878; }
     @media (max-width: 1024px) {
       header { padding: 20px 48px; }
       nav { gap: 20px; }
@@ -78,8 +85,31 @@
 </head>
 <body>
 <script src="/lang/translations.js"></script>
-<header><a href="/"><img src="/logo.png" alt="Turgut Hamid" class="logo"></a><nav><a href="/" data-i18n="nav_about">Home</a><a href="/about.html" data-i18n="nav_expertise">About</a><a href="/programmes.html" data-i18n="nav_training">Training</a><a href="https://wa.me/994512062576" class="btn-contact" data-i18n="btn_contact">Contact Me</a></nav></header>
+<header><a href="/"><img src="/logo.png" alt="Turgut Hamid" class="logo"></a><nav><a href="/" data-i18n="nav_about">Home</a><a href="/about.html" data-i18n="nav_expertise">About</a><a href="/programmes.html" data-i18n="nav_training">Training</a><div class="lang-dropdown"><button class="lang-toggle" id="langBtn">EN</button><div class="lang-menu"><button onclick="switchLang('en')">EN</button><button onclick="switchLang('az')">AZ</button><button onclick="switchLang('ru')">RU</button></div></div><a href="https://wa.me/994512062576" class="btn-contact" data-i18n="btn_contact">Contact Me</a></nav></header>
 <script>
+  function getCurrentLang() {
+    const path = window.location.pathname;
+    if (path.includes('/az')) return 'az';
+    if (path.includes('/ru')) return 'ru';
+    return 'en';
+  }
+
+  function updateLangButton() {
+    const currentLang = getCurrentLang();
+    document.getElementById('langBtn').textContent = currentLang.toUpperCase();
+  }
+
+  function switchLang(lang) {
+    localStorage.setItem('selectedLanguage', lang);
+    const currentPath = window.location.pathname;
+    let newPath = currentPath.replace(/^\/(az|ru)/, '');
+    if (lang === 'en') {
+      window.location.href = newPath;
+    } else {
+      window.location.href = '/' + lang + newPath;
+    }
+  }
+
   function translatePage() {
     const elements = document.querySelectorAll('[data-i18n]');
     elements.forEach(el => {
@@ -94,6 +124,7 @@
   }
 
   window.addEventListener('DOMContentLoaded', function() {
+    updateLangButton();
     translatePage();
     updateInternalLinks();
   });
