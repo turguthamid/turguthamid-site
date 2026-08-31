@@ -533,9 +533,22 @@ function updateInternalLinks() {
   links.forEach(link => {
     const href = link.getAttribute('href');
 
-    if (href && href.startsWith('/') && !href.includes('#') && !href.startsWith('https') && !href.startsWith('http')) {
+    if (!href || href.includes('#') || href.startsWith('https') || href.startsWith('http') || href.startsWith('mailto:') || href.startsWith('tel:')) {
+      return;
+    }
+
+    // Handle absolute paths like /about.html
+    if (href.startsWith('/')) {
       if (!href.includes('/az') && !href.includes('/ru') && !href.includes('/en')) {
         const newHref = `/${lang}${href}`;
+        link.setAttribute('href', newHref);
+      }
+    }
+    // Handle relative paths like expertise-brand-strategy.html or ./programmes.html
+    else if (href && !href.startsWith('/')) {
+      if (!href.includes('/az') && !href.includes('/ru') && !href.includes('/en')) {
+        // For relative links, prepend the language path
+        const newHref = `/${lang}/${href.replace(/^\.\//, '')}`;
         link.setAttribute('href', newHref);
       }
     }
