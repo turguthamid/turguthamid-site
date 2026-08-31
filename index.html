@@ -221,16 +221,10 @@
 </header>
 <script>
   // URL-deki dili detect et
-  function getCurrentLang() {
-    const path = window.location.pathname;
-    if (path.includes('/az')) return 'az';
-    if (path.includes('/ru')) return 'ru';
-    return 'en';
-  }
 
   // Button-u update et
   function updateLangButton() {
-    const currentLang = getCurrentLang();
+    const currentLang = getLanguage();
     document.getElementById('langBtn').textContent = currentLang.toUpperCase();
   }
 

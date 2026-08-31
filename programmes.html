@@ -94,15 +94,9 @@
   </nav>
 </header>
 <script>
-  function getCurrentLang() {
-    const path = window.location.pathname;
-    if (path.includes('/az')) return 'az';
-    if (path.includes('/ru')) return 'ru';
-    return 'en';
-  }
 
   function updateLangButton() {
-    const currentLang = getCurrentLang();
+    const currentLang = getLanguage();
     document.getElementById('langBtn').textContent = currentLang.toUpperCase();
   }
 
