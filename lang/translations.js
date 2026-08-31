@@ -510,24 +510,36 @@ function setLanguage(lang) {
 }
 
 function getLanguage() {
-  // URL-dən dili əvvəl yoxla
   const path = window.location.pathname;
-  console.log('📍 Detected path:', path);
 
   if (path.includes('/az')) {
-    console.log('✓ Azerbaijani detected');
+    localStorage.setItem('selectedLanguage', 'az');
     return 'az';
   }
   if (path.includes('/ru')) {
-    console.log('✓ Russian detected');
+    localStorage.setItem('selectedLanguage', 'ru');
     return 'ru';
   }
-  // Sonra localStorage-dən
   const stored = localStorage.getItem('selectedLanguage');
-  console.log('💾 Stored language:', stored);
   const lang = stored || 'en';
-  console.log('🌍 Final language:', lang);
   return lang;
+}
+
+function updateInternalLinks() {
+  const lang = getLanguage();
+  if (lang === 'en') return;
+
+  const links = document.querySelectorAll('a[href]');
+  links.forEach(link => {
+    const href = link.getAttribute('href');
+
+    if (href && href.startsWith('/') && !href.includes('#') && !href.startsWith('https') && !href.startsWith('http')) {
+      if (!href.includes('/az') && !href.includes('/ru') && !href.includes('/en')) {
+        const newHref = `/${lang}${href}`;
+        link.setAttribute('href', newHref);
+      }
+    }
+  });
 }
 
 function t(key) {
